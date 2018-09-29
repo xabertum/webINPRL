@@ -5,6 +5,7 @@ version: 1.0
 
 */
 
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Serif|Quicksand|Ubuntu+Condensed');
 
 .navbarWrapper {
     width: 65%;
@@ -14,6 +15,11 @@ version: 1.0
 p {
     text-align: justify;
 }
+
+h2, h4, p {
+    font-family: 'PT Serif', serif;
+} 
+
 h4 {
     margin-bottom: 1.1rem;
 }
@@ -67,5 +73,7 @@ h4 {
 
 #map {
     height: 25rem;
+    width: 96%;
+    margin: 0 auto;
 }
 
