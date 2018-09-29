@@ -21,7 +21,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<div class="navbarWrapper">
-			<a class="navbar-brand" href="#">INPRL</a>
+			<a class="navbar-brand" href="index.html">INPRL</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 			 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -29,22 +29,7 @@
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
-						 aria-haspopup="true" aria-expanded="false">Dropdown</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown01">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
+						<a class="nav-link" href="#">Información sobre riesgos <span class="sr-only">(current)</span></a>
 					</li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
@@ -68,6 +53,14 @@
 					 height="750px" alt="Foto numero 3" />
 				</div>
 			</div>
+			<div class="textOverlayWrapper">
+				<div class="textDiv">
+					<h1>Bienvenido a la Web del <span></span> Instituto Nacional de Riesgos Laborales</h1>
+
+				</div>
+			</div>
+
+
 		</div>
 
 		<div class="container">
@@ -88,6 +81,7 @@
 					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
 				</div>
 			</div>
+			<hr>
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Dónde Estamos</h2>
@@ -115,19 +109,30 @@
 		simpleslider.getSlider({
 			container: document.getElementById('myslider'),
 			delay: 5
+
 		});
 	</script>
 	<script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnH4vBMJQA-WiMgX1Ky3Hqi-1Yc2LNJM8&callback=initMap"
-    async defer></script>
+		var map;
+
+		function initMap() {
+			var myPosition = {
+				lat: 38.690185,
+				lng: -4.108076
+			};
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: myPosition,
+				zoom: 9
+			});
+			var marker = new google.maps.Marker({
+				position: myPosition,
+				map: map,
+				title: 'Hello World!'
+			});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnH4vBMJQA-WiMgX1Ky3Hqi-1Yc2LNJM8&callback=initMap"
+	 async defer></script>
 
 </body>
 

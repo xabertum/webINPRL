@@ -5,13 +5,42 @@
 }
 
 .jumbotron {
-    padding: 1em !important;
+    padding: 1rem !important;
+}
+
+.form-control {
+    height: calc(1.85rem + 2px);
+}
+.btn {
+    padding: 0.245rem 0.75rem;
 }
 
 #mySlider {
-    margin-top: 3.3em;
+    margin-top: 3.3rem;
 }
 
-#map {
-    height: 25em;
+.textOverlayWrapper {
+    position: absolute;
+    top: 9rem;
+    left: 25rem;
+    z-index: 10;
 }
+
+.textDiv {
+    position: relative;
+    color: blanchedalmond;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 0rem; 
+    text-align: center;  
+}
+
+.textDiv span {
+    display: table;
+}
+
+
+#map {
+    height: 25rem;
+}
+
