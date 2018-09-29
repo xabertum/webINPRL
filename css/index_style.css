@@ -5,20 +5,35 @@ version: 1.0
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Serif|Quicksand|Ubuntu+Condensed');
+
 
 .navbarWrapper {
-    width: 65%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
 }
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
 p {
     text-align: justify;
 }
 
-h2, h4, p {
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+}
+.text-bold {
+    font-weight: bold;
+}
+
+h2,
+h4,
+p {
     font-family: 'PT Serif', serif;
-} 
+}
 
 h4 {
     margin-bottom: 1.1rem;
@@ -31,8 +46,13 @@ h4 {
 .form-control {
     height: calc(1.85rem + 2px);
 }
+
 .btn {
     padding: 0.245rem 0.75rem;
+}
+
+#padding-title {
+    padding-bottom: 1rem;
 }
 
 #mySlider {
@@ -40,7 +60,7 @@ h4 {
 }
 
 .textOverlayWrapper {
-    position: relative;   
+    position: relative;
     z-index: 10;
 }
 
@@ -49,10 +69,10 @@ h4 {
     color: #E9ECEF;
     background: rgba(0, 0, 0, 0.7);
     padding: 1.5rem;
-    border-radius: 0rem; 
-    text-align: center; 
+    border-radius: 0rem;
+    text-align: center;
     top: -38rem;
-    left: 2.55rem;
+    width: 100%;
 }
 
 .textDiv span {
@@ -76,4 +96,3 @@ h4 {
     width: 96%;
     margin: 0 auto;
 }
-
