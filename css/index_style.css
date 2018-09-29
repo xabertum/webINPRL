@@ -5,14 +5,6 @@ version: 1.0
 
 */
 
-
-
-.navbarWrapper {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-}
-
 /* FONTS */
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
@@ -39,6 +31,13 @@ h4 {
     margin-bottom: 1.1rem;
 }
 
+/* NAVBAR */
+
+.navbarWrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
 .jumbotron {
     padding: 1rem !important;
 }
