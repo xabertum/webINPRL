@@ -47,7 +47,10 @@ p {
     margin-right: 1.5rem;
 }
 
-
+.section-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
 #map {
     height: 25rem;
