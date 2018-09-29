@@ -1,7 +1,10 @@
 .navbarWrapper {
-    width: 75%;
+    width: 65%;
     margin: 0 auto;
     display: flex;
+}
+p {
+    text-align: justify;
 }
 
 .jumbotron {
@@ -20,24 +23,30 @@
 }
 
 .textOverlayWrapper {
-    position: absolute;
-    top: 9rem;
-    left: 25rem;
+    position: relative;   
     z-index: 10;
 }
 
 .textDiv {
-    position: relative;
-    color: blanchedalmond;
+    position: absolute;
+    color: #E9ECEF;
     background: rgba(0, 0, 0, 0.7);
     padding: 1.5rem;
     border-radius: 0rem; 
-    text-align: center;  
+    text-align: center; 
+    top: -38rem;
+    left: 2.55rem;
 }
 
 .textDiv span {
     display: table;
 }
+
+.quienesSomosPic {
+    float: left;
+    margin-right: 1.5rem;
+}
+
 
 
 #map {
