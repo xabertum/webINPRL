@@ -1,3 +1,11 @@
+/*
+
+author: xabertum
+version: 1.0
+
+*/
+
+
 .navbarWrapper {
     width: 65%;
     margin: 0 auto;
@@ -5,6 +13,9 @@
 }
 p {
     text-align: justify;
+}
+h4 {
+    margin-bottom: 1.1rem;
 }
 
 .jumbotron {
@@ -41,6 +52,8 @@ p {
 .textDiv span {
     display: table;
 }
+
+/* SECTIONS */
 
 .quienesSomosPic {
     float: left;
