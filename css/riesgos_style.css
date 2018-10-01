@@ -15,3 +15,9 @@ body {
 p {
     text-align: justify;
 }
+
+.counter-li {
+    list-style: none;
+	
+}
+
