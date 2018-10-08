@@ -1,21 +1,17 @@
 <?php
-include 'conexion.php';
+include 'datos/conexion.php';
+include 'entidades/parte.php';
 
-class AltaNuevoParte
+class AltaNuevoParte extends Conexion
 {
     protected static $conexion;
-
-
-
 
     private static function getConexion()
     {
         self::$conexion = Conexion::conectar();
     }
 
-    protected static function AltaParte() {
-
-        $query = "INSERT INTO Parte VALUES ()";
+    public static function altaParte () {
 
     }
 
