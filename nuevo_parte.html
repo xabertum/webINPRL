@@ -14,6 +14,7 @@
 
     <!-- Customs CSS -->
     <link rel="stylesheet" href="css/partes_style.css">
+    <link rel="stylesheet" href="css/overhang.min.css">
 
 </head>
 
@@ -55,7 +56,8 @@
                         <label for="hora">Hora del accidente</label><br>
                         <input name="hora" id="hora" type="time"><br>
                         <label for="dni">DNI/NIE de la persona accidentada</label><br>
-                        <input name="dni" id="dni" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br>
+                        <input name="dni" id="dni" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))">
+                        <br>
                         <label for="causa">Causa o tipología del accidente</label><br>
                         <input name="causa" id="causa" type="text"> <br>
                         <label for="lesion">Tipo o naturaleza de la lesión</label><br>
@@ -95,7 +97,12 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
-    <script>document.querySelector("#fecha").valueAsDate = new Date();</script>
+    <script>
+        document.querySelector("#fecha").valueAsDate = new Date();
+    </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="/js/overhang.js"></script>
 
 </body>
 
