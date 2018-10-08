@@ -25,16 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             "estado" => "true",
         );
 
-        if (parteControlador::altaParte($input_fecha, $input_hora, $input_dni, $input_causa,
+        if (parteControlador::altaNuevoParte($input_dni, $input_fecha, $input_hora, $input_causa,
             $input_lesion, $input_parte_cuerpo, $input_gravedad, $input_baja)) {
 
             return print(json_encode($resultado));
-        }
-         
+        }         
     }
 }
 
 $resultado = array(
     "estado" => "false",
 );
+var_dump($_POST);
 return print(json_encode($resultado));
+
+

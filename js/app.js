@@ -12,24 +12,23 @@ $(document).ready(function () {
 					$("body").overhang({
 						type: "success",
 						message: "Login correcto! Redirigiendo...",
+						closeConfirm: true,
 						callback: function () {
-							window.location.href = "admin.php";
+							window.location.href = "nuevo_parte.html";
 						}
 					});
 				} else {
 
 					$("body").overhang({
 						type: "error",
-						message: "Usuario o Password incorrecto"
+						message: "Jajaja"
 					});
-
 				}
-
 			},
 			error: function () {
 				$("body").overhang({
 					type: "error",
-					message: "Usuario o Password incorrecto"
+					message: "Revisa el formulario"
 				});
 			}
 		});
