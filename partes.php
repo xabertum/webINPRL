@@ -32,7 +32,7 @@
                         <a class="nav-link" href="riesgos.html">Información sobre riesgos <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="partes.html">Nuevo Parte de Accidente<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="partes.php">Nuevo Parte de Accidente<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -51,7 +51,9 @@
                     <h2>Nuevo parte de accidente</h2>
                     <form class="formulario" action="">
                         <label for="fecha">Fecha de Accidente</label><br>
-                        <input id="fecha" type="date" autofocus> <br>
+                        <input id="fecha" type="date"> <br>
+                        <label for="hora">Hora del accidente</label><br>
+                        <input id="hora" type="time"><br>
                         <label for="dni">DNI/NIE de la persona accidentada</label><br>
                         <input id="dni" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br>
                         <label for="causa">Causa o tipología del accidente</label><br>
@@ -70,7 +72,8 @@
                         </select><br>
                         <label for="baja">¿Ha causado baja?</label><br>
                         <input type="radio" name="baja"> Si
-                        <input type="radio" name="baja"> No
+                        <input type="radio" name="baja"> No <br><br>
+                        <input type="submit" class="btn btn-info" value="Enviar Formulario">
 
                     </form>
                 </div>
