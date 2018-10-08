@@ -1,6 +1,5 @@
 <?php
-
-class AltaNuevoParte {
+class Parte {
     
     //Atributos privados
     private $fecha_accidente;

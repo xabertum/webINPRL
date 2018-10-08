@@ -11,7 +11,7 @@ class Conexion {
         
         try {
            
-            $pdo = new PDO ('mysql:host=localhost;dbname=phplogin', 'root', '');
+            $pdo = new PDO ('mysql:host=localhost;dbname=db_inprl', 'root', '');
     
             return $pdo;
             

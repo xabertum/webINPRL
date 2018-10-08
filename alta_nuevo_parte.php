@@ -1,7 +1,6 @@
 <?php
-
-include '/controlador/parteControlador.php';
-include '/helps/helps.php';
+include 'controlador/parteControlador.php';
+include 'helps/helps.php';
 
 header('Content-type: application/json');
 
@@ -30,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $input_lesion, $input_parte_cuerpo, $input_gravedad, $input_baja)) {
 
             return print(json_encode($resultado));
-        } else {
-            $resultado = array(
-                "estado" => "false",
-            );
-            return print(json_encode($resultado));
         }
+         
     }
-
 }
+
+$resultado = array(
+    "estado" => "false",
+);
+return print(json_encode($resultado));

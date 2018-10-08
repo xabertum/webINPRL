@@ -1,8 +1,8 @@
 <?php
-include 'datos/conexion.php';
-include 'entidades/parte.php';
+include 'conexion.php';
+include 'entidades/Parte.php';
 
-class AltaNuevoParte extends Conexion
+class parteDAO extends Conexion
 {
     protected static $conexion;
 
@@ -13,7 +13,7 @@ class AltaNuevoParte extends Conexion
 
     public static function altaParte($parte)
     {
-        $query = "INSERT INTO Partes (DNI, Fecha_accidente, Hora_accidente, Causa_accidente,
+        $query = "INSERT INTO parte (DNI, Fecha_accidente, Hora_accidente, Causa_accidente,
                 Tipo_lesion, Partes_cuerpo_lesionado, Gravedad, Baja) VALUES (:DNI, :fecha,
                 :hora, :causa, :tipo, :zona, :gravedad, :baja)";
 
