@@ -1,0 +1,12 @@
+
+.navbarWrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+.container {
+    padding-top: 4.5rem;
+  }
