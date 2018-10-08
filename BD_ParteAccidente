@@ -1,0 +1,48 @@
+DROP SCHEMA IF EXISTS ParteAccidente;
+
+CREATE SCHEMA ParteAccidente;
+
+USE ParteAccidente;
+
+
+CREATE TABLE Trabajador
+(
+	DNI CHAR(9),
+	nombre VARCHAR(100) NOT NULL,
+	sexo enum ('hombre','mujer') NOT NULL,
+	fecha_nacimiento DATE NOT NULL,
+	direccion VARCHAR(25) NOT NULL,
+	com_autonoma VARCHAR(20),	
+	telefono VARCHAR(100) NOT NULL,
+	correo_elec VARCHAR(30),
+	sector ENUM ('Auditoria y Consultoria','Banca y Seguros','Construcción e Inmobiliaria','Energia','Educacion','Industria','Farmaceutica','Legal','Recursos Humanos','Servicios Textil y distribucion','Telecomunicaciones y Informatica','Sanidad') NOT NULL,
+	CONSTRAINT pk_trabajador PRIMARY KEY(DNI)
+);
+
+
+CREATE TABLE Parte
+
+(
+    cod_parte MEDIUMINT NOT NULL AUTO_INCREMENT,
+    DNI CHAR(9),       
+    Fecha_accidente DATE,
+    Hora_accidente TIME,
+    Causa_accidente VARCHAR(50) NOT NULL,
+    Tipo_lesion VARCHAR(30),
+    Partes_cuerpo_lesionado VARCHAR(30) NOT NULL,
+    Gravedad ENUM ('Baja','Normal','Alta') NOT NULL,
+    Baja ENUM ('Si','No') NOT NULL,
+    CONSTRAINT pk_parte PRIMARY KEY(cod_parte),
+    CONSTRAINT ck_parte_trabajador FOREIGN KEY(DNI) REFERENCES Trabajador(DNI)
+
+);
+
+//DNI,nombre,sexo,fecha_nacimiento,direccion,com_autonoma,telefono,correo_elec,sector
+
+INSERT INTO Trabajador VALUES ("45678934w","Maria del Carmen Sanz","mujer","1960/10/03","Paseo de los Linares 7","Sevilla","645678765","sanzcarmen01@gmail.com","Sanidad");
+INSERT INTO Trabajador VALUES ("89457634R","Josep Buenas","hombre","1999/01/15","Colinas 45","Cataluña","765340287","mcabanyes@hotmail.com","Farmaceutica");
+
+
+
+
+
