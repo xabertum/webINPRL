@@ -52,8 +52,8 @@
                     <form class="formulario" action="">
                         <label for="fecha">Fecha de Accidente</label><br>
                         <input id="fecha" type="date" autofocus> <br>
-                        <label for="nombre">Nombre de la persona accidentada</label><br>
-                        <input id="nombre" type="text"> <br>
+                        <label for="dni">DNI/NIE de la persona accidentada</label><br>
+                        <input id="dni" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br>
                         <label for="causa">Causa o tipología del accidente</label><br>
                         <input id="causa" type="text"> <br>
                         <label for="lesion">Tipo o naturaleza de la lesión</label><br>
