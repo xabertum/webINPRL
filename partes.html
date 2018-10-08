@@ -48,31 +48,30 @@
             <!-- Example row of columns -->
             <div class="row section-padding">
                 <div class="col-md-12">
-                    <h2>Crear nuevo parte de accidente</h2>
-                    <form action="">
-                        <label for="fecha">Fecha de Accidente</label>
-                        <input id="fecha" type="date">
-                        <label for="nombre">Nombre de la persona accidentada</label>
-                        <input id="nombre" type="text" value="Nombre">
-                        <label for="causa">Causa o tipología del accidente</label>
-                        <input id="causa" type="text" value="Causa o tipología del accidente">
-                        <label for="lesion">Tipo o naturaleza de la lesión</label>
-                        <input id="lesion" type="text" value="Tipo o naturaleza de la lesión">
-                        <label for="parte_cuerpo">Parte del cuerpo lesionada</label>
-                        <input id="parte_cuerpo" type="text" value="Parte del cuerpo lesionada">
-                        <label for="gravedad">Gravedad de la lesión</label>
-                        <input list="gravedad" id="gravedad" type="text" value="Gravedad de la lesión">
-                        <datalist id="gravedad">
-                            <option value="Leve"></option>
-                            <option value="Moderado"></option>
-                            <option value="Grave"></option>
-                            <option value="Muy grave"></option>
-                            <option value="Mortal"></option>
-                        </datalist>
-                        <label for="baja">¿Ha causado baja?</label>
-                        <input type="radio"> Si <br>
-                        <input type="radio"> No
-                        
+                    <h2>Nuevo parte de accidente</h2>
+                    <form class="formulario" action="">
+                        <label for="fecha">Fecha de Accidente</label><br>
+                        <input id="fecha" type="date" autofocus> <br>
+                        <label for="nombre">Nombre de la persona accidentada</label><br>
+                        <input id="nombre" type="text"> <br>
+                        <label for="causa">Causa o tipología del accidente</label><br>
+                        <input id="causa" type="text"> <br>
+                        <label for="lesion">Tipo o naturaleza de la lesión</label><br>
+                        <input id="lesion" type="text"><br>
+                        <label for="parte_cuerpo">Parte del cuerpo lesionada</label><br>
+                        <input id="parte_cuerpo" type="text"><br>
+                        <label for="gravedad">Gravedad de la lesión</label><br>
+                        <select name="gravedad" id="gravedad"><br>
+                            <option value="Leve">Leve</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Grave">Grave</option>
+                            <option value="Muy grave">Muy Grave</option>
+                            <option value="Mortal">Mortal</option>
+                        </select><br>
+                        <label for="baja">¿Ha causado baja?</label><br>
+                        <input type="radio" name="baja"> Si
+                        <input type="radio" name="baja"> No
+
                     </form>
                 </div>
             </div>
@@ -93,6 +92,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <script>document.querySelector("#fecha").valueAsDate = new Date();</script>
 
 </body>
 
