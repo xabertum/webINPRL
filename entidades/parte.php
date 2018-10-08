@@ -12,8 +12,7 @@ class AltaNuevoParte {
     private $gravedad;
     private $baja;
 
-    // GETTERS & SETTERS
-
+    // GETTERS
     /**
      * Get the value of fecha_accidente
      */ 
@@ -76,5 +75,104 @@ class AltaNuevoParte {
     public function getBaja()
     {
         return $this->baja;
+    }
+
+    // SETTERS 
+
+    /**
+     * Set the value of fecha_accidente
+     *
+     * @return  self
+     */ 
+    public function setFecha_accidente($fecha_accidente)
+    {
+        $this->fecha_accidente = $fecha_accidente;
+
+        return $this;
+    }
+    
+
+    /**
+     * Set the value of hora_accidente
+     *
+     * @return  self
+     */ 
+    public function setHora_accidente($hora_accidente)
+    {
+        $this->hora_accidente = $hora_accidente;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of DNI_trabajador
+     *
+     * @return  self
+     */ 
+    public function setDNI_trabajador($DNI_trabajador)
+    {
+        $this->DNI_trabajador = $DNI_trabajador;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of causa_accidente
+     *
+     * @return  self
+     */ 
+    public function setCausa_accidente($causa_accidente)
+    {
+        $this->causa_accidente = $causa_accidente;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of tipo_lesion
+     *
+     * @return  self
+     */ 
+    public function setTipo_lesion($tipo_lesion)
+    {
+        $this->tipo_lesion = $tipo_lesion;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of zona_lesion
+     *
+     * @return  self
+     */ 
+    public function setZona_lesion($zona_lesion)
+    {
+        $this->zona_lesion = $zona_lesion;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of gravedad
+     *
+     * @return  self
+     */ 
+    public function setGravedad($gravedad)
+    {
+        $this->gravedad = $gravedad;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of baja
+     *
+     * @return  self
+     */ 
+    public function setBaja($baja)
+    {
+        $this->baja = $baja;
+
+        return $this;
     }
 }
