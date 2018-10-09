@@ -11,7 +11,7 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Login correcto! Redirigiendo...",
+						message: "Parte dado de alta correctamente",
 						closeConfirm: true,
 						callback: function () {
 							window.location.href = "nuevo_parte.html";
@@ -21,14 +21,14 @@ $(document).ready(function () {
 
 					$("body").overhang({
 						type: "error",
-						message: "Jajaja"
+						message: "Algo ha ido mal, vuelve a intentarlo"
 					});
 				}
 			},
 			error: function () {
 				$("body").overhang({
 					type: "error",
-					message: "Revisa el formulario"
+					message: "Hay campos vacios, revisa el formulario"
 				});
 			}
 		});
