@@ -30,7 +30,7 @@ CREATE TABLE Parte
     Causa_accidente VARCHAR(50) NOT NULL,
     Tipo_lesion VARCHAR(30),
     Partes_cuerpo_lesionado VARCHAR(30) NOT NULL,
-    Gravedad ENUM ('Baja','Normal','Alta') NOT NULL,
+    Gravedad ENUM ('Leve','Moderado','Grave','Muy grave','Mortal') NOT NULL,
     Baja ENUM ('Si','No') NOT NULL,
     CONSTRAINT pk_parte PRIMARY KEY(cod_parte),
     CONSTRAINT ck_parte_trabajador FOREIGN KEY(DNI) REFERENCES Trabajador(DNI)
