@@ -38,7 +38,7 @@ $(document).ready(function () {
 	});
 
 
-	$("#formulario").bind("submit", function () {
+	$("#buscar_parte").bind("submit", function () {
 
 		$.ajax({
 			type: $(this).attr("method"),
