@@ -35,7 +35,7 @@
 						<a class="nav-link" href="nuevo_parte.html">Nuevo Parte de Accidente<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="modificar_parte.html">Modificar Parte<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="modificar_parte.php">Modificar Parte<span class="sr-only">(current)</span></a>
 					</li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
@@ -52,25 +52,28 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3>Modificar Parte de Accidente</h3>
-                    <form action="" method="post">
+                    <form action="buscar_parte.php" method="POST">
                         <label for="codigo_accidente">Código identificador del accidente (DNI del accidentado)</label><br>
                         <input name="codigo_accidente" id="codigo_accidente" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br><br>
-                        <input type="submit" class="btn btn-info" value="Buscar Parte">
+                        <input type="submit" class="btn btn-info" value="Buscar Parte" onclick="xajax_prueba();">
 
-                    </form>
+					</form>
+				</div>
 
+			</div>
 
-                </div>
-
-            </div>
-
-
-
+			<div class="row">
+				<div id="capaformulario" class="col-md-12">
 
 
 
+				</div>
 
-        </div><!-- /container -->
+			</div>
+
+
+
+		</div><!-- /container -->
 
 	</main>
 

@@ -8,7 +8,7 @@ class ParteControlador
         $obj_parte = new Parte();
         $obj_parte->setDNI_trabajador($DNI);
         $obj_parte->setFecha_accidente($fecha);
-        $obj_parte->setHora_accidente($hora);        
+        $obj_parte->setHora_accidente($hora);
         $obj_parte->setCausa_accidente($causa);
         $obj_parte->setTipo_lesion($tipo);
         $obj_parte->setZona_lesion($zona);
@@ -17,4 +17,13 @@ class ParteControlador
 
         return parteDAO::altaParte($obj_parte);
     }
+
+    public static function buscarParte($DNI)
+    {
+        $obj_parte = new Parte();
+        $obj_parte->setDNI_trabajador($DNI);
+
+        return parteDAO::buscarParte($obj_parte);
+    }
+
 }
