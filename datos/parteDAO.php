@@ -50,7 +50,7 @@ class parteDAO extends Conexion
 
     public static function buscarParte($parte)
     {
-        $query = "SELECT * FROM Parte WHERE "
+        $query = "SELECT * FROM Parte WHERE DNI = :DNI";
     }
 
 }
