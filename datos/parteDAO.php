@@ -1,21 +1,21 @@
 <?php
-include 'conexion_epizy.php';
+include 'conexion.php';
 include 'entidades/Parte.php';
 
-class parteDAO extends Conexion_epizy
+class parteDAO extends Conexion
 {
     protected static $conexion;
 
     private static function getConexion()
     {
-        self::$conexion = Conexion_epizy::conectar();
+        self::$conexion = Conexion::conectar();
     }
 
     public static function altaParte($parte)
     {
         $query = "INSERT INTO Parte VALUES (:cod_parte, :DNI, :Fecha_accidente,
                 :Hora_accidente, :Causa_accidente, :Tipo_lesion, :Partes_cuerpo_lesionado, :Gravedad, :Baja)";
-        
+
         self::getConexion();
 
         $resultado = self::$conexion->prepare($query);
@@ -46,6 +46,11 @@ class parteDAO extends Conexion_epizy
             return false;
         }
 
+    }
+
+    public static function buscarParte($parte)
+    {
+        $query = "SELECT * FROM Parte WHERE "
     }
 
 }
