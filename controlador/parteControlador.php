@@ -34,9 +34,10 @@ class ParteControlador
         return parteDAO::mostrarParte($obj_parte);
     }
 
-    public static function modificarParte($fecha, $hora, $causa, $tipo, $zona, $gravedad, $baja)
+    public static function modificarParte($DNI, $fecha, $hora, $causa, $tipo, $zona, $gravedad, $baja)
     {
         $obj_parte = new Parte();
+        $obj_parte->setDNI_trabajador($DNI);
         $obj_parte->setFecha_accidente($fecha);
         $obj_parte->setHora_accidente($hora);
         $obj_parte->setCausa_accidente($causa);

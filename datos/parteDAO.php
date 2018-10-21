@@ -93,7 +93,7 @@ class parteDAO extends Conexion
 
     public static function modificarParte($parte)
     {
-        $query = "UPDATE Parte SET cod_parte = :cod_parte, DNI = :DNI, Fecha_accidente = :Fecha_accidente,
+        $query = "UPDATE Parte SET Fecha_accidente = :Fecha_accidente,
                 Hora_accidente = :Hora_accidente, Causa_accidente = :Causa_accidente, Tipo_lesion = :Tipo_lesion,
                 Partes_cuerpo_lesionado = :Partes_cuerpo_lesionado, Gravedad = :Gravedad, Baja = :Baja WHERE DNI = :DNI";
 
@@ -111,7 +111,6 @@ class parteDAO extends Conexion
         $_gravedad = $parte->getGravedad();
         $_baja = $parte->getBaja();
 
-        $resultado->bindParam(":cod_parte", $_cod_parte);
         $resultado->bindParam(":DNI", $_DNI);
         $resultado->bindParam(":Fecha_accidente", $_fecha);
         $resultado->bindParam(":Hora_accidente", $_hora);
@@ -131,7 +130,20 @@ class parteDAO extends Conexion
 
     public static function eliminarParte($parte) {
 
+        $query = "DELETE FROM Parte WHERE DNI = :DNI";
 
+        self::getConexion();
+        $resultado = self::$conexion->prepare($query);
+        $_DNI = $parte->getDNI_trabajador();
+
+        $resultado->bindParam(":DNI", $_DNI);
+        $resultado->execute();
+
+        if ($resultado->execute()) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
