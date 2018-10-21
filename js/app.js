@@ -52,9 +52,22 @@ $(document).ready(function () {
 						closeConfirm: true						
 					});
 					
-					$("#capaformulario").append("<b>Probando...</b>");
+					$.ajax({
+						url: 'mostrar_parte.php',
+						data: 'data',
+						dataType: 'json',
+						success: function(data) {
+							parte_return = data;
+							$.each(parte_return, function(i, parte) {
+								$('#capaformulario').append("<p>" + parte + "</p>");
+							});
+						}, 
+						error: function(data) {
+							alert(data);
+						}
 
-
+					});	
+			
 				} else {
 
 					$("body").overhang({
