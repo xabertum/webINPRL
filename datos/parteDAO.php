@@ -121,7 +121,7 @@ class parteDAO extends Conexion
         $resultado->bindParam(":Baja", $_baja);
 
         if ($resultado->execute()) {
-            return true;
+            return true;            
         } else {
             return false;
         }

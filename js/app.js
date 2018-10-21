@@ -48,7 +48,7 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Parte de accidente encontrado correctamente"						
+						message: "Parte de accidente encontrado correctamente"
 					});
 
 					$.ajax({
@@ -58,7 +58,7 @@ $(document).ready(function () {
 						success: function (data) {
 							parte_return = data;
 							$.each(parte_return, function (i, parte) {
-								$('#capaformulario').append("<br><br><form id='modificar_parte' method='POST' action='modificar_parte.php'>" +
+								$('#capaformulario').append("<br><br><form id='modificar_parte' method='POST' action=''>" +
 									"<label for='DNI'>DNI/NIE del Accidentado</label>" + "<br>" +
 									"<input style='background-color: lightyellow;' id ='DNI' type='text' name='DNI' value=" + "'" + parte.DNI + "'" + "readonly>" + "<br>" +
 									"<label for='fecha'>Fecha del Accidente</label>" + "<br>" +
@@ -75,8 +75,8 @@ $(document).ready(function () {
 									"<input id='gravedad' name='gravedad' type='text' value=" + "'" + parte.Gravedad + "'" + ">" + "<br>" +
 									"<label for='baja'>¿Ha causdado baja?</label>" + "<br>" +
 									"<input id='baja' name='baja' type='text' value=" + "'" + parte.Baja + "'" + ">" + "<br><br>" +
-									"<input style='margin-right: 5px' type='submit' name='modificar_parte' class='btn btn-info' value='Modificar'>" +
-									"<input type='submit' class='btn btn-info' name='eliminar_parte' value='Eliminar'>" +
+									"<button style='margin-right: 5px' type='submit' class='submitform btn btn-info' value='Modificar' formaction='modificar_parte.php'>" +"Modificar"+ "</button>" + 
+									"<button type='submit' class='submitform btn btn-info' value='Eliminar' formaction='eliminar_parte.php'>" +"Eliminar"+ "</button>" + 
 									"</form>");
 							});
 						},
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 					$("body").overhang({
 						type: "error",
-						message: "Algo ha ido mal, vuelve a intentarlo"
+						message: "Parte no encontrado, vuelve a intentarlo..."
 					});
 				}
 			},
@@ -107,13 +107,14 @@ $(document).ready(function () {
 	});
 
 
-	$(document).on("submit", "#modificar_parte", function () {
+	$(document).on("click", ".submitform", function () {
 
 		$.ajax({
-			type: $(this).attr("method"),
-			url: $(this).attr("action"),
+			type: 'POST',
+			url: $(this).attr("formaction"),
+			data: $("#modificar_parte").serialize(),
 			success: function (response) {
-
+				
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
@@ -132,15 +133,16 @@ $(document).ready(function () {
 				}
 			},
 			error: function () {
+
 				$("body").overhang({
 					type: "error",
-					message: "Hay campos vacios, revisa el formulario"
+					message: "Algo ha ido mal, vuelve a intentarlo"
 				});
 			}
 		});
 
 		return false;
-
+		
 	});
 
 });

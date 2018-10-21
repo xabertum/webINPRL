@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (parteControlador::buscarParte($input_DNI)) {
             return print(json_encode($resultado));
         }
-
     }
 }
 
