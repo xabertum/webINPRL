@@ -48,8 +48,7 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Parte de accidente encontrado correctamente",
-						closeConfirm: true
+						message: "Parte de accidente encontrado correctamente"						
 					});
 
 					$.ajax({
@@ -108,12 +107,11 @@ $(document).ready(function () {
 	});
 
 
-	$("#modificar_parte").callback.bind("submit", function () {
+	$(document).on("submit", "#modificar_parte", function () {
 
 		$.ajax({
 			type: $(this).attr("method"),
 			url: $(this).attr("action"),
-			data: $(this).serialize(),
 			success: function (response) {
 
 				if (response.estado == "true") {
@@ -122,7 +120,7 @@ $(document).ready(function () {
 						message: "Parte modificado/eliminado correctamente",
 						closeConfirm: true,
 						callback: function () {
-							window.location.href = "nuevo_parte.html";
+							window.location.href = "modificar_parte.html";
 						}
 					});
 				} else {
@@ -144,8 +142,5 @@ $(document).ready(function () {
 		return false;
 
 	});
-
-
-
 
 });
