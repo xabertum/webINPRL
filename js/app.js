@@ -59,7 +59,27 @@ $(document).ready(function () {
 						success: function(data) {
 							parte_return = data;
 							$.each(parte_return, function(i, parte) {
-								$('#capaformulario').append("<p>" + parte + "</p>");
+								$('#capaformulario').append("<br><br><form method='POST' action='prueba.php'>"  +
+																"<label for='DNI'>DNI/NIE del Accidentado</label>" + "<br>" +
+																"<input style='background-color: lightyellow;' id ='DNI' type='text' value=" + "'" + parte.DNI + "'" + "readonly>" + "<br>" + 
+																"<label for='fecha'>Fecha del Accidente</label>" + "<br>" +  
+																"<input id='fecha' type='text' value=" + "'" + parte.Fecha_accidente + "'" + ">" + "<br>" +
+																"<label for='hora'>Hora del Accidente</label>" + "<br>" +  
+																"<input id='hora' type='text' value=" + "'" + parte.Hora_accidente + "'" + ">" + "<br>" +
+																"<label for='causa'>Causa del Accidente</label>" + "<br>" +  
+																"<input id='causa' type='text' value=" + "'" + parte.Causa_accidente + "'" + ">" + "<br>" +
+																"<label for='tipo'>Tipo de Lesión</label>" + "<br>" +  
+																"<input id='tipo' type='text' value=" + "'" + parte.Tipo_lesion + "'" + ">" + "<br>" +
+																"<label for='partes_cuerpo'>Parte del cuerpo lesionada</label>" + "<br>" +  
+																"<input id='partes_cuerpo' type='text' value=" + "'" + parte.Partes_cuerpo_lesionado + "'" + ">" + "<br>" +
+																"<label for='gravedad'>Gravedad del accidente</label>" + "<br>" +  
+																"<input id='gravedad' type='text' value=" + "'" + parte.Gravedad + "'" + ">" + "<br>" +
+																"<label for='baja'>¿Ha causdado baja?</label>" + "<br>" +  
+																"<input id='baja' type='text' value=" + "'" + parte.Baja + "'" + ">" + "<br><br>" +
+																"<input style='margin-right: 5px' type='submit' class='btn btn-info' value='Modificar'>"+
+																"<input type='submit' class='btn btn-info' value='Eliminar'>"+
+																 	 
+								  "</form>");
 							});
 						}, 
 						error: function(data) {

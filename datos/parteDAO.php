@@ -83,7 +83,7 @@ class parteDAO extends Conexion
         $resultado->execute();
 
         if ($resultado->rowCount() > 0) {
-            $filas = $resultado->fetch();
+            $filas = $resultado->fetchAll();
 
             return $filas;
 
