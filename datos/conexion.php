@@ -1,8 +1,6 @@
 <?php
-
 class Conexion
 {
-
     /**
      * Conecta con la base de datos
      *
