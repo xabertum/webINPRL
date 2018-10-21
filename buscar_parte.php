@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $input_DNI = validar_campo($_POST['codigo_accidente']);
 
-        var_dump($_POST);
         $resultado = array("estado" => "true");
 
         if (parteControlador::buscarParte($input_DNI)) {
@@ -22,5 +21,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $resultado = array ("estado" => "false");
-var_dump($_POST);
 return print(json_encode($resultado));

@@ -37,7 +37,6 @@ $(document).ready(function () {
 
 	});
 
-
 	$("#buscar_parte").bind("submit", function () {
 
 		$.ajax({
@@ -49,12 +48,13 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Parte dado de alta correctamente",
-						closeConfirm: true,
-						callback: function () {
-							window.location.href = "nuevo_parte.html";
-						}
+						message: "Parte de accidente encontrado correctamente",
+						closeConfirm: true						
 					});
+					
+					$("#capaformulario").append("<b>Probando...</b>");
+
+
 				} else {
 
 					$("body").overhang({
@@ -74,8 +74,5 @@ $(document).ready(function () {
 		return false;
 
 	});
-
-
-
 
 });
