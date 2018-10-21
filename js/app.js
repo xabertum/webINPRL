@@ -76,8 +76,8 @@ $(document).ready(function () {
 																"<input id='gravedad' type='text' value=" + "'" + parte.Gravedad + "'" + ">" + "<br>" +
 																"<label for='baja'>¿Ha causdado baja?</label>" + "<br>" +  
 																"<input id='baja' type='text' value=" + "'" + parte.Baja + "'" + ">" + "<br><br>" +
-																"<input style='margin-right: 5px' type='submit' class='btn btn-info' value='Modificar'>"+
-																"<input type='submit' class='btn btn-info' value='Eliminar'>"+
+																"<input style='margin-right: 5px' type='submit' name='modificar_parte' class='btn btn-info' value='Modificar'>"+
+																"<input type='submit' class='btn btn-info' name='eliminar_parte' value='Eliminar'>"+
 																 	 
 								  "</form>");
 							});
