@@ -129,5 +129,11 @@ class parteDAO extends Conexion
 
     }
 
+    public static function eliminarParte($parte) {
+
+
+
+    }
+
 
 }

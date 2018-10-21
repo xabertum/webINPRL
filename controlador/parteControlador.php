@@ -34,6 +34,28 @@ class ParteControlador
         return parteDAO::mostrarParte($obj_parte);
     }
 
+    public static function modificarParte($fecha, $hora, $causa, $tipo, $zona, $gravedad, $baja)
+    {
+        $obj_parte = new Parte();
+        $obj_parte->setFecha_accidente($fecha);
+        $obj_parte->setHora_accidente($hora);
+        $obj_parte->setCausa_accidente($causa);
+        $obj_parte->setTipo_lesion($tipo);
+        $obj_parte->setZona_lesion($zona);
+        $obj_parte->setGravedad($gravedad);
+        $obj_parte->setBaja($baja);
+
+        return parteDAO::modificarParte($obj_parte);
+    }
+
+    public static function eliminarParte ($DNI) {
+
+        $obj_parte = new Parte();
+        $obj_parte->setDNI_trabajador($DNI);
+
+        return parteDAO::eliminarParte($obj_parte);
+
+    }
 
 
 }
