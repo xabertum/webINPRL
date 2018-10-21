@@ -26,4 +26,14 @@ class ParteControlador
         return parteDAO::buscarParte($obj_parte);
     }
 
+    public static function mostrarParte($DNI)
+    {
+        $obj_parte = new Parte();
+        $obj_parte->setDNI_trabajador($DNI);
+
+        return parteDAO::mostrarParte($obj_parte);
+    }
+
+
+
 }

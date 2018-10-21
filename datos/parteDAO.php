@@ -65,10 +65,29 @@ class parteDAO extends Conexion
             if ($filas['DNI'] == $parte->getDNI_trabajador()) {
                 return true;
             }
+        }
+
+        return false;
+    }
+
+    public static function mostrarParte($parte)
+    {
+        $query = "SELECT * FROM Parte WHERE DNI = :DNI";
+
+        self::getConexion();
+        $resultado = self::$conexion->prepare($query);
+        $_DNI = $parte->getDNI_trabajador();
+
+        $resultado->bindParam(":DNI", $_DNI);
+
+        $resultado->execute();
+
+        if ($resultado->rowCount() > 0) {
+            $filas = $resultado->fetch();
+
+            return $filas;
 
         }
- 
-        return false;
 
     }
 
