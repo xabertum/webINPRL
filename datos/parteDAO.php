@@ -1,6 +1,6 @@
 <?php
 include 'conexion.php';
-include 'entidades/Parte.php';
+include '/opt/lampp/htdocs/uocphp/webINPRL/entidades/parte.php';
 
 class parteDAO extends Conexion
 {
