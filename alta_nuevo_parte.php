@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
-$resultado = array(
+$resultado = array( 
     "estado" => "false",
 );
 
