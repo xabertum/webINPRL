@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Web INPRL</title>
+
+	<!-- Bootstrap's CSS -->
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Customs CSS -->
+	<link rel="stylesheet" href="css/partes_style.css">
+	<link rel="stylesheet" href="css/overhang.css">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="navbarWrapper">
+			<a class="navbar-brand" href="index.html">INPRL</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+			 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="riesgos.html">Información sobre riesgos <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="nuevo_parte.html">Nuevo Parte de Accidente<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="modificar_parte.html">Modificar Parte<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<main role="main">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Modificar Parte de Accidente</h3>
+                    <form action="buscar_parte.php" method="POST" id="buscar_parte">
+                        <label for="codigo_accidente">Código identificador del accidente (DNI/NIE del accidentado)</label><br>
+                        <input name="codigo_accidente" id="codigo_accidente" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br><br>
+                        <input type="submit" class="btn btn-info" value="Buscar Parte">
+
+					</form>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div id="capaformulario" class="col-md-12"></div>
+			</div>
+
+
+
+		</div><!-- /container -->
+
+	</main>
+
+	<footer class="container">
+		<p>&copy; INPRL 2017-2018 - developed by xabertum</p>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="js/overhang.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
