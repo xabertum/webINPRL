@@ -56,9 +56,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3>Login</h3>
-                    <form action="" method="POST" id="buscar_parte">
-                        <label for="codigo_accidente">Código identificador del accidente (DNI/NIE del accidentado)</label><br>
-                        <input name="codigo_accidente" id="codigo_accidente" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br><br>
+                    <form action="" method="POST" id="consulta_partes">
+                        <label for="codigo_login">Código identificador (DNI/NIE del accidentado)</label><br>
+						<input name="codigo_login" id="codigo_login" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"> <br><br>
+						<label for="passwd">Contraseña</label><br>
+						<input name="passwd" type="password"><br>
                         <input type="submit" class="btn btn-info" value="Buscar Parte">
 
 					</form>
