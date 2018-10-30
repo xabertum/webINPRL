@@ -23,10 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             
             $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
             $_SESSION["usuario"] = array(
-                    "id" => $usuario->getId(),
-                    "nombre" => $usuario->getNombre(),
-                    "rol" => $usuario->getRol(),
-                    "username" => $usuario->getUsername(),            
+                    "DNI" => $usuario->getDNI(),
+                    "passwd" => $usuario->getPasswd()                                       
             );
             return print(json_encode($resultado));
             
