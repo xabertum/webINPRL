@@ -1,8 +1,8 @@
 <?php
 include 'conexion.php';
-include '/opt/lampp/htdocs/uocphp/webINPRL/entidades/parte.php';
+include '/opt/lampp/htdocs/uocphp/webINPRL/entidades/Usuario.php';
 
-class parteDAO extends Conexion
+class UsuarioDAO extends Conexion
 {
     protected static $conexion;
 
@@ -44,7 +44,37 @@ class parteDAO extends Conexion
         }
 
         return false;
+    }
 
+    /**
+     * Función que sirve para recuperar el usuario
+     *
+     *  @param object $usuario
+     * @return object
+     */
+    public static function getUser($usuario)
+    {
+        $query = "SELECT DNI, passwd FROM Trabajador WHERE DNI = :DNI AND passwd = :passwd";
+
+        self::getConexion();
+
+        $resultado = self::$conexion->prepare($query);
+
+        $_usuario = $usuario->getDNI();
+        $_password = $usuario->getPasswd();
+
+        $resultado->bindParam(":DNI", $_DNI);
+        $resultado->bindParam("passwd", $_passwd);
+        
+        $resultado->execute();
+
+        $filas = $resultado->fetch();
+
+        $usuario = new Usuario();
+        $usuario->setDNI($filas["DNI"]);
+        $usuario->setPasswd($filas["passwd"]);
+
+        return $usuario;
 
     }
 
