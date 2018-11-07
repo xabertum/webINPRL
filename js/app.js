@@ -145,4 +145,44 @@ $(document).ready(function () {
 		
 	});
 
+
+	$("#consulta_partes").bind("submit", function () {
+
+		$.ajax({
+			type: $(this).attr("method"),
+			url: $(this).attr("action"),
+			data: $(this).serialize(),
+			success: function (response) {
+
+				if (response.estado == "true") {
+					$("body").overhang({
+						type: "success",
+						message: "Login correcto... Redirigiendo",
+						closeConfirm: false,
+						callback: function () {
+							window.location.href = "busqueda_parte_login.html";
+						}
+					});
+				} else {
+
+					$("body").overhang({
+						type: "error",
+						message: "Algo ha ido mal, vuelve a intentarlo"
+					});
+				}
+			},
+			error: function () {
+				$("body").overhang({
+					type: "error",
+					message: "Hay campos vacios, revisa el formulario"
+				});
+			}
+		});
+
+		return false;
+
+	});
+
+
+
 });

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web INPRL</title>
+
+    <!-- Bootstrap's CSS -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Customs CSS -->
+    <link rel="stylesheet" href="css/partes_style.css">
+    <link rel="stylesheet" href="css/overhang.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="navbarWrapper">
+            <a class="navbar-brand" href="index.html">INPRL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="riesgos.html">Información sobre riesgos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="nuevo_parte.html">Nuevo Parte de Accidente<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="modificar_parte.html">Modificar Parte<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="consulta_partes_login.html">Consulta de Partes<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Busqueda de Accidentes</h3>
+                    <form action="consulta_partes_login.php" method="POST" id="consulta_partes">
+                        <fieldset>
+                            <legend>Información sobre el accidente</legend>
+                            <label for="codigo_login">Código identificador (DNI/NIE)</label><br>
+                            <input name="usuario" id="codigo_login" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))">
+                            <br><br>
+                            <label for="fecha_accidente">Fecha Accidente</label><br>
+                            <input name="fecha_accidente" id="fecha_accidente" type="text"><br><br>
+                            <label for="nombre">Nombre de la persona accidentada</label><br>
+                            <input name="nombre" id="nombre" type="text"><br>
+                            <label for="causa_lesion">Causa o tipología del accidente</label><br>
+                            <input name="causa_lesion" id="causa_lesion" type="text"><br><br>
+                            <label for="tipo_lesion">Tipo o naturaleza de la lesión</label><br>
+                            <input name="tipo_lesion" id="tipo_lesion" type="text"><br><br>
+                            <label for="parte_lesionada">Parte del cuerpo lesionada</label><br>
+                            <input name="parte_lesionada" id="parte_lesionada" type="text"><br><br>
+                            <label for="gravedad">Gravedad de la lesión</label><br>
+                            <select name="gravedad" id="gravedad"><br>
+                                <option value="Leve">Leve</option>
+                                <option value="Moderado">Moderado</option>
+                                <option value="Grave">Grave</option>
+                                <option value="Muy grave">Muy Grave</option>
+                                <option value="Mortal">Mortal</option>
+                            </select><br><br>
+                            <label for="baja">¿Ha causado baja?</label><br>
+                            <input type="radio" name="baja" value="Si"> Si
+                            <input type="radio" name="baja" value="No"> No <br><br>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos Estadísticos</legend>
+                            <label for="comunidad_autonoma">Comunidad Autónoma</label><br>
+                            <input name="comunidad_autonoma" id="comunidad_autonoma" type="text"><br>
+                            <label for="fecha_nacimiento">Fecha Nacimiento</label><br>
+                            <input name="fecha_nacimiento" id="fecha_nacimiento" type="text"><br>
+                            <label for="sexo">Sexo</label><br>
+                            <input name="sexo" id="sexo" type="text"><br><br>                            
+                        </fieldset>
+
+                        <input type="submit" class="btn btn-info" value="Buscar Accidente">
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div id="capaformulario" class="col-md-12"></div>
+            </div>
+
+
+
+        </div><!-- /container -->
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; INPRL 2017-2018 - developed by xabertum</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="js/overhang.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
