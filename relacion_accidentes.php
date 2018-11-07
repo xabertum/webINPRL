@@ -1,3 +1,12 @@
+<?php
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -56,49 +65,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3>Busqueda de Accidentes</h3>
-                    <form action="busqueda_parte_login.php" method="POST" id="busqueda_parte_login">
-                        <fieldset>
-                            <legend>Información sobre el accidente</legend>
-                            <label for="codigo_login">Código identificador (DNI/NIE)</label><br>
-                            <input name="usuario" id="codigo_login" type="text" maxlength="9" pattern=" (([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))">
-                            <br><br>
-                            <label for="fecha_accidente">Fecha Accidente</label><br>
-                            <input name="fecha_accidente" id="fecha_accidente" type="date"><br><br>
-                            <label for="nombre">Nombre de la persona accidentada</label><br>
-                            <input name="nombre" id="nombre" type="text"><br>
-                            <label for="causa_lesion">Causa o tipología del accidente</label><br>
-                            <input name="causa_lesion" id="causa_lesion" type="text"><br><br>
-                            <label for="tipo_lesion">Tipo o naturaleza de la lesión</label><br>
-                            <input name="tipo_lesion" id="tipo_lesion" type="text"><br><br>
-                            <label for="parte_lesionada">Parte del cuerpo lesionada</label><br>
-                            <input name="parte_lesionada" id="parte_lesionada" type="text"><br><br>
-                            <label for="gravedad">Gravedad de la lesión</label><br>
-                            <select name="gravedad" id="gravedad"><br>
-                                <option value="Leve">Leve</option>
-                                <option value="Moderado">Moderado</option>
-                                <option value="Grave">Grave</option>
-                                <option value="Muy grave">Muy Grave</option>
-                                <option value="Mortal">Mortal</option>
-                            </select><br><br>
-                            <label for="baja">¿Ha causado baja?</label><br>
-                            <input type="radio" name="baja" value="Si"> Si
-                            <input type="radio" name="baja" value="No"> No <br><br>
-
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Datos Estadísticos</legend>
-                            <label for="comunidad_autonoma">Comunidad Autónoma</label><br>
-                            <input name="comunidad_autonoma" id="comunidad_autonoma" type="text"><br>
-                            <label for="fecha_nacimiento">Fecha Nacimiento</label><br>
-                            <input name="fecha_nacimiento" id="fecha_nacimiento" type="date"><br>
-                            <label for="sexo">Sexo</label><br>
-                            <input name="sexo" id="sexo" type="text"><br><br>
-                        </fieldset>
-
-                        <input type="submit" class="btn btn-info" value="Buscar Accidente">
-
-                    </form>
+                    
                 </div>
 
             </div>

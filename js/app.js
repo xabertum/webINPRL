@@ -184,5 +184,42 @@ $(document).ready(function () {
 	});
 
 
+	$("#busqueda_parte_login").bind("submit", function () {
+
+		$.ajax({
+			type: $(this).attr("method"),
+			url: $(this).attr("action"),
+			data: $(this).serialize(),
+			success: function (response) {
+
+				if (response.estado == "true") {
+					$("body").overhang({
+						type: "success",
+						message: "Busqueda correcta... Redirigiendo",
+						closeConfirm: false,
+						callback: function () {
+							window.location.href = "relacion_accidentes.php";
+						}
+					});
+				} else {
+
+					$("body").overhang({
+						type: "error",
+						message: "Algo ha ido mal, vuelve a intentarlo"
+					});
+				}
+			},
+			error: function () {
+				$("body").overhang({
+					type: "error",
+					message: "Algo ha ido mal, vuelve a intentarlo"
+				});
+			}
+		});
+
+		return false;
+
+	});
+
 
 });
