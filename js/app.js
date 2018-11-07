@@ -198,7 +198,7 @@ $(document).ready(function () {
 						message: "Busqueda correcta... Redirigiendo",
 						closeConfirm: false,
 						callback: function () {
-							window.location.href = "relacion_accidentes.php";
+							window.location.href = "mostrar_parte_login.php";
 						}
 					});
 				} else {
